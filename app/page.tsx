@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
@@ -13,10 +14,18 @@ export default function Home() {
       </nav>
 
       <section style={{marginTop: 28}}>
-        <h2 className="text-xl font-semibold">注目プロジェクト</h2>
+        <h2 className="text-xl font-semibold">プロジェクト</h2>
         <div className="gallery">
-          <Link href="/projects/project1" className="card">
-            <div className="thumb" aria-hidden />
+          <Link href="https://test-auth-teal.vercel.app/" className="card">
+            <div className="thumb">
+              <Image
+                src="/photo_project1.png"
+                alt="Project 1 サムネイル"
+                width={800}
+                height={450}
+                style={{ objectFit: "cover", width: "100%", height: "100%" }}
+              />
+            </div>
             <div className="card-body">
               <div className="card-title">Project 1</div>
               <div className="card-desc">サンプルプロジェクト1の概要。フロントエンドのデモ。</div>

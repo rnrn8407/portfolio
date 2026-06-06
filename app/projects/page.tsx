@@ -1,9 +1,10 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function ProjectsPage() {
   const projects = [
-    { id: 'project1', title: 'Project 1', desc: 'フロントエンドのサンプルプロジェクトです。' },
-    { id: 'project2', title: 'Project 2', desc: 'バックエンドのサンプルプロジェクトです。' },
+    { id: 'project1', title: 'Project 1', desc: 'フロントエンドのサンプルプロジェクトです。', thumb: '/file.svg' },
+    { id: 'project2', title: 'Project 2', desc: 'バックエンドのサンプルプロジェクトです。', thumb: '/globe.svg' },
   ];
 
   return (
@@ -14,7 +15,15 @@ export default function ProjectsPage() {
       <div className="gallery">
         {projects.map(p => (
           <Link key={p.id} href={`/projects/${p.id}`} className="card">
-            <div className="thumb" aria-hidden />
+            <div className="thumb">
+              <Image
+                src={p.thumb}
+                alt={`${p.title} のサムネイル`}
+                width={800}
+                height={450}
+                style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+              />
+            </div>
             <div className="card-body">
               <div className="card-title">{p.title}</div>
               <div className="card-desc">{p.desc}</div>

@@ -1,10 +1,19 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Project1Page() {
   return (
     <main className="container">
       <div className="card">
-        <div className="thumb" />
+        <div className="thumb">
+          <Image
+            src="/file.svg"
+            alt="Project 1 サムネイル"
+            width={1200}
+            height={675}
+            style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+          />
+        </div>
         <div className="card-body">
           <h1 className="card-title">Project 1</h1>
           <p className="card-desc">このページは Project 1 の詳細です。ここに目的、技術スタック、成果物の説明、デモやソースコードへのリンクを記載します。</p>
