@@ -1,13 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
+import ParticlesBackground from "./components/ParticlesBackground";
 
 export default function Home() {
   return (
-    <main className="container">
-      <header>
-        <h1 className="site-title">ポートフォリオ</h1>
-        <p className="site-sub">就職活動用の制作物一覧です。各プロジェクトの詳細やデモへ移動できます。</p>
-      </header>
+    <div className="pageWrapper">
+      <ParticlesBackground />
+      <main className="container pageContent">
+        <header>
+          <h1 className="site-title">ポートフォリオ</h1>
+          <p className="site-sub">就職活動用の制作物一覧です。各プロジェクトの詳細やデモへ移動できます。</p>
+        </header>
 
       <nav style={{marginTop: 20}}>
         <Link href="/projects" className="btn-primary">プロジェクト一覧を見る</Link>
@@ -41,6 +44,7 @@ export default function Home() {
           </Link>
         </div>
       </section>
-    </main>
+      </main>
+    </div>
   );
 }
