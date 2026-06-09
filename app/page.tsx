@@ -17,7 +17,7 @@ export default function Home() {
       </nav>
 
       <section style={{marginTop: 28}}>
-        <h2 className="text-xl font-semibold">プロジェクト</h2>
+        <h2 className="text-xl font-semibold text-white">プロジェクト</h2>
         <div className="gallery">
           <Link href="https://test-auth-teal.vercel.app/" className="card">
             <div className="thumb">
