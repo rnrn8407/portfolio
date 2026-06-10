@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import ParticlesBackground from "./components/ParticlesBackground";
+import ProjectCard from "./components/ProjectCard";
 
 export default function Home() {
   return (
@@ -19,29 +20,19 @@ export default function Home() {
       <section style={{marginTop: 28}}>
         <h2 className="text-xl font-semibold text-black">プロジェクト</h2>
         <div className="gallery">
-          <Link href="https://test-auth-teal.vercel.app/" className="card">
-            <div className="thumb">
-              <Image
-                src="/photo_project1.png"
-                alt="Project 1 サムネイル"
-                width={800}
-                height={450}
-                style={{ objectFit: "cover", width: "100%", height: "100%" }}
-              />
-            </div>
-            <div className="card-body">
-              <div className="card-title">Project 1</div>
-              <div className="card-desc">サンプルプロジェクト1の概要。フロントエンドのデモ。</div>
-            </div>
-          </Link>
+          <ProjectCard
+            href="https://test-auth-teal.vercel.app/"
+            title="認証機能デモ"
+            description="supabaseを用いた認証機能のデモ実装"
+            imageSrc="/photo_project1.png"
+            imageAlt="Project 1 サムネイル"
+          />
 
-          <Link href="/projects/project2" className="card">
-            <div className="thumb" aria-hidden />
-            <div className="card-body">
-              <div className="card-title">Project 2</div>
-              <div className="card-desc">サンプルプロジェクト2の概要。バックエンドの設計例。</div>
-            </div>
-          </Link>
+          <ProjectCard
+            href="/projects/project2"
+            title="Project 2"
+            description="サンプルプロジェクト2の概要。バックエンドの設計例。"
+          />
         </div>
       </section>
       </main>

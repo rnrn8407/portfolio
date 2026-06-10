@@ -74,7 +74,16 @@ a { color: #0ea5e9; text-decoration: none; }
   .card { background-color: #0f1724; border-color: rgba(255,255,255,0.04); }
 }
 .card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(12,18,31,0.12); }
-.card-body { padding: 1rem; }
+.card-body {
+  padding: 1rem;
+  overflow: hidden;
+  max-height: 90px;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+.card:hover .card-body {
+  max-height: 300px;
+  padding: 1.5rem;
+}
 .card-title { font-weight: 600; font-size: 1.0625rem; }
 .card-desc { color: var(--muted); margin-top: 0.4rem; font-size: 0.9375rem; }
 
