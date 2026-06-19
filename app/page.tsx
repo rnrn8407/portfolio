@@ -29,9 +29,16 @@ export default function Home() {
           />
 
           <ProjectCard
-            href="/projects/project2"
-            title="Project 2"
-            description="サンプルプロジェクト2の概要。バックエンドの設計例。"
+            href="https://next-todoapp-ff2l.vercel.app/"
+            title="Todoアプリ"
+            description="NextJSでのTodoアプリ（supabase未連携、ローカルストレージ保存）"
+            imageSrc="/photo_project2.png"
+          />
+          <ProjectCard
+            href="https://next-calender.vercel.app/"
+            title="Calender-app"
+            description="NextJSでのCalender（supabase未連携）"
+            imageSrc="/photo_project3.png"
           />
         </div>
       </section>
